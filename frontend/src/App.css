@@ -1,0 +1,352 @@
+/* ===== SCROLL ANIMATIONS (soft distances for a smoother scroll flow) ===== */
+.scroll-fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-fade-left {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-fade-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-fade-right {
+  opacity: 0;
+  transform: translateX(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-fade-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-scale-in {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }
+.delay-700 { transition-delay: 700ms; }
+
+/* ===== MINIMAL HERO (logo + tagline, Antigravity-style) ===== */
+.hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(900px, 90vw);
+  height: min(900px, 90vw);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(41, 121, 255, 0.10) 0%, rgba(41, 121, 255, 0.04) 40%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(41, 121, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(41, 121, 255, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 20%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 20%, transparent 75%);
+  pointer-events: none;
+}
+
+/* ===== PROCESS TIMELINE ===== */
+.process-line {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  right: 24px;
+  height: 2px;
+  background: linear-gradient(to right, rgba(41, 121, 255, 0.05), rgba(41, 121, 255, 0.3), rgba(41, 121, 255, 0.3), rgba(41, 121, 255, 0.05));
+}
+
+.process-node {
+  position: relative;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border: 2px solid rgba(41, 121, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.process-node:hover {
+  border-color: #2979FF;
+  box-shadow: 0 4px 20px rgba(41, 121, 255, 0.25);
+}
+
+/* ===== CARD HOVER EFFECTS ===== */
+.nx-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(11, 13, 20, 0.08);
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nx-card:hover {
+  border-color: rgba(41, 121, 255, 0.4);
+  box-shadow: 0 12px 32px rgba(41, 121, 255, 0.10);
+  transform: translateY(-4px);
+}
+
+/* ===== CTA GLOW ===== */
+.cta-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-glow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(41, 121, 255, 0.35), transparent 50%, rgba(0, 184, 217, 0.35));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ===== SECTION DIVIDER GLOW ===== */
+.section-glow-top {
+  position: relative;
+}
+
+.section-glow-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(41, 121, 255, 0.2), transparent);
+}
+
+/* ===== BUTTON GLOW ===== */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.btn-glow:hover::after {
+  transform: translateX(100%);
+}
+
+/* ===== GRADIENT TEXT ===== */
+.gradient-text {
+  background: linear-gradient(135deg, #0B0D14 0%, #4B5563 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-blue {
+  background: linear-gradient(135deg, #1D5FD6 0%, #2979FF 60%, #00B8D9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Left-to-right blue → cyan → green, mirroring the "N" logomark */
+.gradient-text-logo {
+  background: linear-gradient(90deg, #1D5FD6 0%, #2979FF 32%, #00B8D9 64%, #22C55E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== KEY PROJECTS — distinct reveal effects =====
+   Content sweeps in from the left through a blur; the demo panel
+   swings in from the right like a door (3D tilt). */
+.reveal-slide-left {
+  opacity: 0;
+  transform: translateX(-64px);
+  filter: blur(10px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-slide-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+.reveal-tilt-right {
+  opacity: 0;
+  transform: perspective(1200px) rotateY(-16deg) translateX(90px) scale(0.93);
+  transform-origin: left center;
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-tilt-right.visible {
+  opacity: 1;
+  transform: perspective(1200px) rotateY(0deg) translateX(0) scale(1);
+}
+
+/* ===== WHY US — ordered card spread =====
+   Cards fly in from the right and settle in order, each overlapped by the next
+   so only a strip shows. Hovering a card keeps it in place and slides every
+   card AFTER it to the right (268px = card width minus the visible strip),
+   fully revealing the hovered one. Cards before it never move. */
+.spread-card {
+  opacity: 0;
+  transform: translateX(120vw);
+  transition:
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(11, 13, 20, 0.18);
+  cursor: pointer;
+}
+
+.spread-card.spread-settled {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.spread-card.spread-settled:hover {
+  box-shadow: 0 24px 60px rgba(41, 121, 255, 0.35);
+}
+
+.spread-card.spread-settled:hover ~ .spread-card.spread-settled {
+  transform: translateX(268px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spread-card {
+    opacity: 1;
+    transform: translateX(0);
+    transition: none;
+  }
+}
+
+/* Card content: fully present, rises and sharpens into place */
+.reveal-blur-up {
+  opacity: 0;
+  transform: translateY(14px);
+  filter: blur(6px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-blur-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-slide-left,
+  .reveal-tilt-right,
+  .reveal-blur-up {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
+
+/* Outlined ghost index number (01, 02) for project blocks */
+.index-outline {
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(41, 121, 255, 0.35);
+}
+
+/* ===== TYPEWRITER CARET (hero headline) ===== */
+.type-caret {
+  display: inline-block;
+  width: 0.06em;
+  height: 0.85em;
+  margin-left: 0.05em;
+  background: #2979FF;
+  vertical-align: baseline;
+  transform: translateY(0.1em);
+  animation: caret-blink 0.9s steps(2, start) infinite;
+}
+
+@keyframes caret-blink {
+  50% { opacity: 0; }
+}
+
+/* ===== DARK THEME OVERRIDES (helpers with hardcoded light colors) ===== */
+.dark .nx-card {
+  background: #10131C;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dark .nx-card:hover {
+  border-color: rgba(41, 121, 255, 0.5);
+  box-shadow: 0 12px 32px rgba(41, 121, 255, 0.16);
+}
+
+.dark .process-node {
+  background: #10131C;
+}
+
+.dark .gradient-text {
+  background: linear-gradient(135deg, #F4F6FB 0%, #9CA3AF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .hero-glow {
+  background: radial-gradient(circle, rgba(41, 121, 255, 0.16) 0%, rgba(41, 121, 255, 0.06) 40%, transparent 70%);
+}
+
+.dark .hero-grid-bg {
+  background-image:
+    linear-gradient(rgba(41, 121, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(41, 121, 255, 0.08) 1px, transparent 1px);
+}

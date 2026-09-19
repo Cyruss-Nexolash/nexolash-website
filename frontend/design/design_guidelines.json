@@ -1,0 +1,160 @@
+{
+  "theme": "dark",
+  "archetype": "Swiss & High-Contrast mixed with Electric & Neon (Restrained)",
+  "brand": {
+    "name": "Nexolash",
+    "positioning": "Deep-tech engineering company building intelligent systems for mobility, automation, enterprise AI, cloud-native infrastructure, robotics, and research-driven innovation.",
+    "vibe": "Premium futuristic, dark mode first, minimal but technical, clean grid-based layout, strong typography, subtle animations."
+  },
+  "typography": {
+    "headings": {
+      "family": "Space Grotesk",
+      "weight": "font-bold",
+      "tracking": "tracking-tight",
+      "usage": "All section titles, hero headlines, and large numerical data."
+    },
+    "body": {
+      "family": "Inter",
+      "weight": "font-normal",
+      "tracking": "tracking-normal",
+      "usage": "Paragraphs, card descriptions, navigation links, buttons."
+    },
+    "scale": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl",
+      "h3": "text-2xl sm:text-3xl",
+      "h4": "text-lg sm:text-xl",
+      "body": "text-base text-zinc-400",
+      "small": "text-sm text-zinc-500"
+    }
+  },
+  "colors": {
+    "background": {
+      "primary": "#05050A",
+      "secondary": "#0A0A0F",
+      "card": "#0D0D12"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A1A1AA",
+      "muted": "#71717A"
+    },
+    "accent": {
+      "primary": "#2979FF",
+      "secondary": "#00E5FF",
+      "glow": "rgba(41, 121, 255, 0.15)"
+    },
+    "border": {
+      "default": "rgba(255, 255, 255, 0.1)",
+      "hover": "rgba(41, 121, 255, 0.5)"
+    }
+  },
+  "spacing_and_layout": {
+    "section_padding": "py-24 sm:py-32",
+    "container": "max-w-7xl mx-auto px-6 lg:px-8",
+    "grid_gaps": "gap-6 lg:gap-8",
+    "border_radius": "rounded-xl",
+    "cards": {
+      "padding": "p-8",
+      "style": "bg-[#0D0D12] border border-white/10 hover:border-[#2979FF]/50 transition-colors duration-300"
+    }
+  },
+  "visual_enhancers": {
+    "shadows": {
+      "glow": "shadow-[0_0_30px_rgba(41,121,255,0.15)]",
+      "card_hover": "shadow-[0_8px_30px_rgba(0,0,0,0.5)]"
+    },
+    "glassmorphism": {
+      "header": "backdrop-blur-xl bg-[#05050A]/70 border-b border-white/10"
+    },
+    "animations": {
+      "hover": "hover:-translate-y-1 transition-transform duration-300",
+      "fade_in": "animate-in fade-in slide-in-from-bottom-8 duration-700"
+    }
+  },
+  "image_urls": [
+    {
+      "url": "https://images.pexels.com/photos/30547584/pexels-photo-30547584.jpeg",
+      "category": "hero_background",
+      "description": "Abstract futuristic cyber landscape with digital matrix and glowing lights. Use as a subtle background behind the right-side Hero section or embedded within the AI network visual."
+    },
+    {
+      "url": "https://images.pexels.com/photos/17194838/pexels-photo-17194838.jpeg",
+      "category": "research_lab",
+      "description": "Abstract image of ethereal fiber optic strands cascading with glowing blue lights. Use for the Research Lab section hero image."
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1774791242463-ad4fd6386cb3",
+      "category": "card_visual",
+      "description": "Abstract blue and teal light streaks on dark background. Good for Cloud Deployment or EV Intelligence card backgrounds."
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1775057154553-0f3e8902fea3",
+      "category": "card_visual",
+      "description": "Abstract geometric lines and shapes on black background. Good for AI Architecture or Integration cards."
+    }
+  ],
+  "dependencies": {
+    "icons": [
+      "lucide-react",
+      "react-icons"
+    ],
+    "ui": [
+      "clsx",
+      "tailwind-merge"
+    ]
+  },
+  "sections_breakdown": [
+    {
+      "name": "Sticky Navbar",
+      "instructions": "Use glassmorphism (backdrop-blur-xl bg-[#05050A]/70). Left: Text logo 'Nexolash' in Space Grotesk font-bold text-white. Center: Nav links in Inter text-sm text-zinc-400 hover:text-white. Right: Primary CTA button 'Get Started' with electric blue background."
+    },
+    {
+      "name": "Hero Section",
+      "instructions": "Split layout grid-cols-1 lg:grid-cols-2. Left: H1 headline 'Engineering the Future of Intelligence', subheadline text-zinc-400, two buttons (Primary Electric Blue, Secondary outline white/10). Below buttons: Trust badges using react-icons/si (e.g., SiOpenai, SiNvidia, SiGooglecloud, SiAmazonaws, SiIbm) in text-zinc-500. Right: Animated AI network visual utilizing a combination of glowing CSS nodes and the 'hero_background' image."
+    },
+    {
+      "name": "Solutions Section",
+      "instructions": "7 premium cards. Use a Bento Grid layout (e.g., first two cards span 2 cols each, next three span 1 col, etc.). Dark flat cards with 1px border-white/10. On hover, change border to electric blue and add a subtle glow shadow."
+    },
+    {
+      "name": "Architecture Stack Section",
+      "instructions": "Visual representation of a tech stack. Stack 3-4 horizontal wide cards or CSS layers with isometric transforms. Use strong typography to denote layers (e.g., Application Layer, AI Framework Layer, Cloud Infrastructure Layer)."
+    },
+    {
+      "name": "Industries Section",
+      "instructions": "6 large premium cards in a 2x3 or 3x2 grid. Each card represents an industry (e.g., Mobility, Enterprise, Robotics). Use large Lucide icons and minimal text."
+    },
+    {
+      "name": "Process Section",
+      "instructions": "Horizontal timeline. 5 steps: Discover, Design, Build, Deploy, Scale. Use a horizontal line with glowing nodes and text below each node. Mobile: Stack vertically."
+    },
+    {
+      "name": "Research Lab Section",
+      "instructions": "5 research areas. Feature a large visual area using 'research_lab' image alongside an accordion or list of research areas (e.g., Quantum AI, Autonomous Systems)."
+    },
+    {
+      "name": "Internal Projects Section",
+      "instructions": "3 project cards. Each card must distinctly show: Problem, Approach, Tech Stack, and Status. Use a badge component for 'Status' (e.g., Active, In R&D)."
+    },
+    {
+      "name": "Why Choose Us Section",
+      "instructions": "6 cards grid. Focus on metrics, reliability, and engineering superiority. Clean layout, technical iconography."
+    },
+    {
+      "name": "CTA Banner",
+      "instructions": "Full width banner with a deep gradient glow or tracing beam border. Large headline, strong CTA. Darkest background to make it pop."
+    },
+    {
+      "name": "Contact Section",
+      "instructions": "Split layout. Left: Contact info (Email, HQ, placeholder phone). Right: Frontend-only form. Use Shadcn-like inputs but heavily customized with dark styling (bg-black border-white/10 focus:border-electric-blue). Include a 'Send Message' button."
+    },
+    {
+      "name": "Footer",
+      "instructions": "Clean multi-column layout. Very large top padding (py-32). Left: Massive 'Nexolash' logo. Right: Columns for Solutions, Company, Legal, Social. Bottom: Copyright and social links using react-icons/si."
+    }
+  ],
+  "testing_requirements": {
+    "instructions": "All interactive and key informational elements MUST include a data-testid attribute in kebab-case. Example: data-testid='hero-cta-button', data-testid='contact-form-submit'."
+  }
+}

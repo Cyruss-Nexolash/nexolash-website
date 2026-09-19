@@ -1,0 +1,9 @@
+{
+  // Static-assets-only Worker: no server code, just the CRA build output.
+  "name": "nexolash-website",
+  "compatibility_date": "2026-09-19",
+  "assets": {
+    "directory": "./frontend/build",
+    "not_found_handling": "single-page-application"
+  }
+}

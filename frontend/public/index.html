@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="description"
+      content="Nexolash — From systems to intelligence. AI-native engineering for mobility, automation, and cloud systems."
+    />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.svg" type="image/svg+xml" />
+
+    <!-- Open Graph / social share (add og-image.png to public/ when ready) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nexolash — From systems to intelligence" />
+    <meta
+      property="og:description"
+      content="AI-native engineering for mobility, automation, and cloud systems."
+    />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <title>Nexolash — From systems to intelligence</title>
+
+    <!-- Apply saved theme before paint to avoid a flash of the wrong theme.
+         ?theme=dark|light in the URL overrides, for quick previews. -->
+    <script>
+      (function () {
+        try {
+          var forced = new URLSearchParams(window.location.search).get('theme');
+          var theme = forced || localStorage.getItem('nx-theme');
+          if (theme === 'dark') document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
